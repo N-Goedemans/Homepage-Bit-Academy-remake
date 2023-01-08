@@ -1,0 +1,52 @@
+
+body {
+    color: rgb(22, 22, 130);
+    font-family: sans-serif;
+}
+article::before {
+    content: "🟩";
+    position: relative;
+    bottom: 10px;
+}
+h1 {
+    font-size: 40px;
+}
+h2 {
+    margin-top: 0;
+}
+section {
+    display: flex;
+    justify-content: space-evenly;
+}
+article {
+    display: flex;
+    border-top: 50px;
+    flex-direction: column;
+    width: 300px;
+    padding-right: 1rem;
+}
+.greenline{
+    background-color: green;
+    height: 4px;
+    width: 100%;
+}
+@media screen and (max-width: 900px) {
+    article {
+      width: 38rem;
+      padding-left: 1rem;
+    }
+    section {
+        flex-direction: column;
+    }
+    .greenline {
+        background-color: green;
+        height: unset;
+        width: 4px;
+  }
+  article::before {
+      content: "🟩";
+      position: relative;
+      bottom: -22px;
+      right: 24px;
+  }
+}
